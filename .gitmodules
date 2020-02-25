@@ -1,0 +1,3 @@
+[submodule "firmware/nodemcu-scaffold"]
+	path = firmware/nodemcu-scaffold
+	url = https://github.com/skrewz/nodemcu-scaffold
