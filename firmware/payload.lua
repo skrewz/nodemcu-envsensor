@@ -8,6 +8,8 @@ do
   end
 
   local main = function()
+    bme680wrap = require ("bme680wrap")
+    ccs811wrap = require ("ccs811wrap")
 
     print("\nStarting main handler...\n====================")
     print("Have myname: "..myname)
