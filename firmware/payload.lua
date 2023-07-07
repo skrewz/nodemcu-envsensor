@@ -125,6 +125,9 @@ do
       --print("publishing ccs811 data point:"..buf)
       mqttwrap.maybepublish("datainput/"..location.."/"..myname, buf, 0, 0)
     end)
+    ccs811wrap.on("err", function(e)
+      mqttwrap.maybepublish("error/"..location.."/"..myname, "css811 err: 0x"..string.byte(err), 0, 0)
+    end)
     ccs811wrap.setup(css811_sda,css811_scl,css811_id)
     ccs811wrap.starttimer(60*1000)
 
